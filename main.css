@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html{
+    font-size:  62.5%
+}
+.container{
+    background: lightblue;
+    display: grid;
+    grid-template-rows: 20vh minmax(80vh,min-content);
+    grid-template-columns: 5fr 90fr 5fr;
+    grid-template-areas: ". header . "
+                        ". gamebox . "   
+                        " . . .";
+                    }
+.header{
+    grid-area: header;
+    background: lightcoral;
+}                    
+.header > .Answer{
+    font-size: 3rem;
+}
+.gamebox{
+    grid-area: gamebox;
+    background: lightseagreen;
+    display: grid;
+    grid-template-rows: 10fr 90fr;
+}
+.ResetRow{
+    background: rgb(255, 185, 115);
+}
+.ResetRow > .ResetButton{
+    border: 2px solid black;
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.Circles{
+background: rgb(99, 247, 94);
+display: grid;
+grid-template-columns:repeat(auto-fit,minmax(320px, 1fr));
+grid-column-gap: 3px;
+grid-row-gap: 3px; 
+}
+.CircleColoum{
+     background-color: aqua;
+    border: 2px solid black 
+
+}
+.IndividualCircle{
+    background: rgb(242, 245, 47);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; 
+    transition: all 300ms ease-in-out;
+    margin-top: 2rem;
+    margin-bottom: 2rem;  
+}
+@media only screen and (max-width: 775px)
+{
+    html{
+        font-size: 55%;
+    }
+}
