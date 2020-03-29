@@ -27,6 +27,7 @@ function SettingUpUi(){
         </div>`);
     }
     fetchcircle = Array.from(document.querySelectorAll(".IndividualCircle"));
+    var RandomlySelectedCircle =  getRandomInt(0, 6);
     answer =   fetchcircle[RandomlySelectedCircle].style.background;
     fetchAnswer.textContent = answer;
 }
